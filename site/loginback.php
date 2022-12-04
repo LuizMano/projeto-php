@@ -18,37 +18,35 @@ $cor4 = mysqli_fetch_array($data4);
 $cor5 = mysqli_fetch_array($data5);
 
 if ($pass != $cor1['username'] || $user != $cor1['pass']){
+    header('Location: index.php?pg=login');
 }else{
     header('Location: index.php?pg=logged');
     setcookie(name, $user);
-    setcookie('invalid');
 }
 if ($pass != $cor2['username'] || $user != $cor2['pass']){
+    header('Location: index.php?pg=login');
 }else{
     header('Location: index.php?pg=messages');
     setcookie(name, $user);
-    setcookie('invalid');
 }
 if ($pass != $cor3['username'] || $user != $cor3['pass']){
+    header('Location: index.php?pg=login');
 }else{
     header('Location: index.php?pg=messages');
     setcookie(name, $user);
-    setcookie('invalid');
 }
 if ($pass != $cor4['username'] || $user != $cor4['pass']){
     header('Location: index.php?pg=login');
-    setcookie('invalid',"Invalido, tente novamente");
 }else{
     header('Location: index.php?pg=messages');
     setcookie(name, $user);
-    setcookie('invalid');
 }
 if ($pass != $cor5['username'] || $user != $cor5['pass']){
+    header('Location: index.php?pg=login');
 }else{
     header('Location: index.php?pg=messages');
     setcookie(name, $user);
-    setcookie('invalid');
 }
 header('Location: index.php?pg=login');
-setcookie('invalid',"Invalido, tente novamente");
+
 ?>

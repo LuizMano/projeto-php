@@ -6,4 +6,5 @@ $nome = $_POST['nome'];
 $senha = $_POST['senha'];
 $insert = "INSERT INTO users (username,pass) VALUES ('$nome','$senha')";
 mysqli_query($con, $insert);
-header('Location: index.php?pg=login');
+setcookie('cadastro',"Cadastro feito com sucesso!");
+header('Location: index.php?pg=cadastro');
